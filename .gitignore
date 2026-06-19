@@ -18,6 +18,7 @@ nextjs/next-env.d.ts
 
 # local data
 games/
+data/
 
 # env
 .env
@@ -33,3 +34,5 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+data/
