@@ -52,7 +52,7 @@ export const UploadGameDialog = () => {
 
   return (
     <Dialog open={open} onOpenChange={(o) => setOpen(o)}>
-      <DialogTrigger>
+      <DialogTrigger asChild>
         <Button>Upload a game</Button>
       </DialogTrigger>
       <DialogContent>
