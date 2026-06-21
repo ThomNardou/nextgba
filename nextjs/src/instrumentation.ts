@@ -11,5 +11,12 @@ export async function register() {
       const secretKey = crypto.randomBytes(32).toString("hex");
       fs.writeFileSync("data/secret.txt", secretKey);
     }
+
+    if (!fs.existsSync("data/sessions.json")) {
+      fs.writeFileSync("data/sessions.json", JSON.stringify({}));
+    }
+
+
+
   }
 }

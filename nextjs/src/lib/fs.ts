@@ -1,4 +1,5 @@
 import fs from "fs";
+import crypto from "crypto";
 import { z } from "zod";
 
 const metadataSchema = z.object({
@@ -13,6 +14,7 @@ export const pathExists = async (path: string) => {
     .then(() => true)
     .catch(() => false);
 };
+
 
 export const getGameMetadata = async (gameId: string) => {
   const basePath = `/data/games/${gameId}`;

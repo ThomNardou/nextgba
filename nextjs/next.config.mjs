@@ -4,7 +4,7 @@ const nextConfig = {
   reactStrictMode: true,
   experimental: {
     instrumentationHook: true,
-    serverComponentsExternalPackages: ["handlebars"],
+    serverComponentsExternalPackages: ["handlebars", "bcrypt"],
     serverActions: {
       bodySizeLimit: "20mb",
     },

@@ -60,7 +60,23 @@ export default function Login() {
               onClick={() => {
                 const pinValue = pin.join("");
                 console.log("Logging in with PIN:", pinValue);
-                // Add your login logic here
+
+                fetch("/api/login", {
+                  method: "POST",
+                  headers: {
+                    "Content-Type": "application/json",
+                  },
+                  body: JSON.stringify({ pin: pinValue }),
+                })
+                  .then((response) => {
+                    console.log("Login response:", response);
+                    if (response.ok) {
+                      alert("Login successful!");
+                      window.location.href = "/";
+                    } else {
+                      alert("Login failed. Please check your PIN and try again.");
+                    }
+                  });
               }}
             >
               Login
